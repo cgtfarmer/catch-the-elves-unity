@@ -5,7 +5,7 @@ using UnityEngine.Assertions;
 
 public class OrthographicPositionWrapper: MonoBehaviour {
 
-  public Camera cam;
+  private Camera cam;
   // private Vector2 screenBounds;
   // private SpriteRenderer spriteRenderer;
   // private Vector2 spriteExtents;
@@ -17,7 +17,8 @@ public class OrthographicPositionWrapper: MonoBehaviour {
   // private Bounds cameraBounds;
 
   void Start() {
-    SpriteRenderer spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
+    SpriteRenderer spriteRenderer = this.GetComponent<SpriteRenderer>();
+    this.cam = Camera.main;
 
     Assert.IsNotNull(this.cam);
     // this.cameraBounds = this.cam.Bounds

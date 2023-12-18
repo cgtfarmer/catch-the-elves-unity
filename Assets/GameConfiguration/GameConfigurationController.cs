@@ -7,34 +7,46 @@ public class GameConfigurationController: MonoBehaviour {
 
   public Counter counter;
 
-  public ResourceSpawner resourceSpawner;
+  public EnemySpawner enemySpawner;
+
+  public Enemy enemy;
 
   void Start() {
     Assert.IsNotNull(this.counter);
-    Assert.IsNotNull(this.resourceSpawner);
+    Assert.IsNotNull(this.enemySpawner);
+    Assert.IsNotNull(this.enemy);
   }
 
-  public void SetSomeConfiguration() {
-    print($"[GameConfigurationController#SetSomeConfiguration]");
+  public void SetEasyConfiguration() {
+    print($"[GameConfigurationController#SetEasyConfiguration]");
 
-    this.resourceSpawner.quantity = 10;
+    this.enemySpawner.quantity = 10;
     this.counter.count = 0;
     this.counter.maxCount = 10;
+    this.enemy.maxVelocity = 3;
+    this.enemy.maxDirectionDuration = 5;
+    this.enemy.stopProbability = 0.3f;
   }
 
-  public void SetLotsConfiguration() {
-    print($"[GameConfigurationController#SetLotsConfiguration]");
+  public void SetHardConfiguration() {
+    print($"[GameConfigurationController#SetHardConfiguration]");
 
-    this.resourceSpawner.quantity = 100;
+    this.enemySpawner.quantity = 10;
     this.counter.count = 0;
-    this.counter.maxCount = 100;
+    this.counter.maxCount = 10;
+    this.enemy.maxVelocity = 20;
+    this.enemy.maxDirectionDuration = 5;
+    this.enemy.stopProbability = 0.1f;
   }
 
-  public void SetTonsConfiguration() {
-    print($"[GameConfigurationController#SetTonsConfiguration]");
+  public void SetImpossibleConfiguration() {
+    print($"[GameConfigurationController#SetImpossibleConfiguration]");
 
-    this.resourceSpawner.quantity = 1000;
+    this.enemySpawner.quantity = 10;
     this.counter.count = 0;
-    this.counter.maxCount = 1000;
+    this.counter.maxCount = 10;
+    this.enemy.maxVelocity = 50;
+    this.enemy.maxDirectionDuration = 5;
+    this.enemy.stopProbability = 0.05f;
   }
 }

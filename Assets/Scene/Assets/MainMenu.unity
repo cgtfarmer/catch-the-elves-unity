@@ -1130,7 +1130,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1562956722}
         m_TargetAssemblyTypeName: GameConfigurationController, Assembly-CSharp
-        m_MethodName: SetLotsConfiguration
+        m_MethodName: SetHardConfiguration
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1276,7 +1276,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1562956722}
         m_TargetAssemblyTypeName: GameConfigurationController, Assembly-CSharp
-        m_MethodName: SetSomeConfiguration
+        m_MethodName: SetEasyConfiguration
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1366,7 +1366,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: {fileID: 11400000, guid: 79c5c6c2b2636e547adc1badaf388744, type: 2}
-  resourceSpawner: {fileID: 11400000, guid: bec4065921f4b684391cbeab39870b3f, type: 2}
+  enemySpawner: {fileID: 11400000, guid: 52ab681610a6f6d4889a462b7ab8566d, type: 2}
+  enemy: {fileID: 11400000, guid: 97ad72bbf89c13b41b80ff8bc7984cbb, type: 2}
 --- !u!4 &1562956723
 Transform:
   m_ObjectHideFlags: 0
@@ -1468,7 +1469,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1562956722}
         m_TargetAssemblyTypeName: GameConfigurationController, Assembly-CSharp
-        m_MethodName: SetTonsConfiguration
+        m_MethodName: SetImpossibleConfiguration
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

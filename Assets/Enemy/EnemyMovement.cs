@@ -14,14 +14,18 @@ public class EnemyMovement: MonoBehaviour {
 
   private Rigidbody2D rb;
 
+  private Animator animator;
+
   private float directionDuration;
 
   void Start() {
-    this.rb = this.gameObject.GetComponent<Rigidbody2D>();
+    this.rb = this.GetComponent<Rigidbody2D>();
+    this.animator = this.GetComponent<Animator>();
     this.directionDuration = 0f;
     this.velocity = 0f;
 
     Assert.IsNotNull(this.enemy);
+    Assert.IsNotNull(this.animator);
     Assert.IsNotNull(this.rb);
 
     this.GetNewVelocity();
@@ -40,6 +44,9 @@ public class EnemyMovement: MonoBehaviour {
     this.velocity = Random.Range(0.0f, this.enemy.maxVelocity);
 
     this.movement = this.GetNewMovement();
+    this.animator.SetFloat("Horizontal", this.movement.x);
+    this.animator.SetFloat("Vertical", this.movement.y);
+    this.animator.SetFloat("Speed", this.movement.sqrMagnitude);
   }
 
   private Vector2 GetNewMovement() {

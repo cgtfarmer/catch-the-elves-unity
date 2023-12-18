@@ -7,7 +7,7 @@ public class EnemyDisplay : MonoBehaviour {
 
   public Enemy enemy;
 
-  public EnemySprite enemySprite;
+  // public EnemySprite enemySprite;
 
   private SpriteRenderer spriteRenderer;
 
@@ -15,7 +15,7 @@ public class EnemyDisplay : MonoBehaviour {
     this.spriteRenderer = this.GetComponent<SpriteRenderer>();
 
     Assert.IsNotNull(this.enemy);
-    Assert.IsNotNull(this.enemySprite);
+    // Assert.IsNotNull(this.enemySprite);
     Assert.IsNotNull(this.spriteRenderer);
   }
 

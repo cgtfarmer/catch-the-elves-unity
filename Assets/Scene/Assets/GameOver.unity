@@ -1272,7 +1272,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 618d9124d5b943f4ca4e5d2275824b2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickerPlayer: {fileID: 11400000, guid: acc4b6975f1fff14f8690f4b926afeb0, type: 2}
+  counter: {fileID: 11400000, guid: 79c5c6c2b2636e547adc1badaf388744, type: 2}
+  timer: {fileID: 11400000, guid: a693ff33e9c4c2c4b8604e9b59f5b627, type: 2}
 --- !u!222 &809981151
 CanvasRenderer:
   m_ObjectHideFlags: 0
